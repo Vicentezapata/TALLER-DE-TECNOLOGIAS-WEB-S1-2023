@@ -1,0 +1,584 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/1492e65a78.js' crossorigin='anonymous'></script>
+    <link href="./CSS/Estilos.css" rel="stylesheet">
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!--SWEET ALERT-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>CShark</title>
+
+</head>
+
+<body onload="obtenerDatos()">
+    <!-- SECCION DE BARRA DE NAVEGACION -->
+    <nav class="shadow navbar navbar-expand-lg navbar-light bg-light-brown" aria-label="Ninth navbar example">
+        <div class="container-xl">
+            <img src="./Recursos/Imagenes/logo.png" alt="" width="350" height="54"
+                class="d-inline-block align-text-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL"
+                aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07XL">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#quienes-somos">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#menu-dia">Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#reservas">Reservas</a>
+                    </li>
+                </ul>
+                <form>
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- SECCION DE INFOGRAFIAS -->
+    <div class="container mt-5" id="quienes-somos">
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide w-50 col" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://ae01.alicdn.com/kf/HTB10zcHXsfrK1RkSmLyq6xGApXav/7x5ft-Japan-Sushi-Sashimi-Diner-Wood-Plank-Washable-No-Wrinkle-Banner-Photo-Studio-Background-Backdrop-Thicker.jpg_Q90.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://ae01.alicdn.com/kf/HTB10zcHXsfrK1RkSmLyq6xGApXav/7x5ft-Japan-Sushi-Sashimi-Diner-Wood-Plank-Washable-No-Wrinkle-Banner-Photo-Studio-Background-Backdrop-Thicker.jpg_Q90.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://ae01.alicdn.com/kf/HTB10zcHXsfrK1RkSmLyq6xGApXav/7x5ft-Japan-Sushi-Sashimi-Diner-Wood-Plank-Washable-No-Wrinkle-Banner-Photo-Studio-Background-Backdrop-Thicker.jpg_Q90.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="col ">
+                <p>¡Bienvenidos al mundo marino del sushi y los cocteles de nuestro restaurante, donde los tiburones se
+                    encuentran con la fusión culinaria! Sumérgete en una experiencia única que combina la delicadeza del
+                    sushi con la audacia de los cocteles, todo ello envuelto en una temática submarina llena de energía
+                    y emoción.</p>
+                <p>Nuestro equipo de chefs expertos ha creado una amplia variedad de rolls de sushi, cuidadosamente
+                    elaborados con los ingredientes más frescos y sabrosos. Desde los clásicos nigiri y sashimi hasta
+                    creaciones innovadoras inspiradas en los tiburones, cada bocado es un deleite para los sentidos.</p>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Pero no solo nos destacamos en la cocina, también somos especialistas en la mixología de cocteles.
+                    Nuestros talentosos bartenders han diseñado una carta de bebidas que te sorprenderá, donde los
+                    sabores exóticos y refrescantes se fusionan en armonía con la temática de tiburones. ¿Estás listo
+                    para probar nuestro Sharktini o tal vez un Mai Tai Mordaz?</p>
+                <p>Sumérgete en nuestro acogedor y vibrante ambiente, decorado con elementos marinos y toques de
+                    elegancia. Ya sea que estés buscando una noche romántica, una reunión con amigos o simplemente
+                    quieras disfrutar de una comida excepcional, nuestro restaurante de sushi con temática de cocteles y
+                    tiburones es el lugar perfecto para crear recuerdos inolvidables.</p>
+                <p>¡Te invitamos a explorar nuestra web y descubrir todo lo que tenemos para ofrecerte! Desde reservas y
+                    menús hasta eventos especiales y promociones, aquí encontrarás todo lo que necesitas para planificar
+                    tu próxima visita. ¡Bienvenido al océano culinario de sushi y cocteles con temática de tiburones!
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- SECCION DE FAVORITOS DEL DIA -->
+    <div class="container p-5" id="menu-dia">
+        <div class="card-group">
+            <div class="card m-1 m-sm-1 m-md-1">
+                <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">California Rolls</h5>
+                    <p class="card-text">$8.000</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card m-5 m-sm-1">
+                <img src="https://mahatmarice.com/wp-content/uploads/2019/08/Curry-Salmon-Sushi-Stacks.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card m-5 m-sm-1">
+                <img src="https://dagustin.com/wp-content/uploads/2014/04/plato-sushi-thegem-blog-default.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECCION DEL MENU -->
+    <div class="container" id="menu">
+        <!-- ENLACS TABS -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi"
+                    type="button" role="tab" aria-controls="sushi" aria-selected="true"><i
+                        class="fa-solid fa-utensils"></i> Sushi</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cocteles-tab" data-bs-toggle="tab" data-bs-target="#cocteles" type="button"
+                    role="tab" aria-controls="cocteles" aria-selected="false"><i
+                        class="fa-solid fa-martini-glass-citrus"></i> Cocteles</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="wine-tab" data-bs-toggle="tab" data-bs-target="#wine" type="button"
+                    role="tab" aria-controls="wine" aria-selected="false"><i class="fa-solid fa-wine-bottle"></i>
+                    Vinos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="entradas-tab" data-bs-toggle="tab" data-bs-target="#entradas" type="button"
+                    role="tab" aria-controls="entradas" aria-selected="false">Entradas</button>
+            </li>
+        </ul>
+        <!-- CONTENIDO TABS -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="sushi" role="tabpanel" aria-labelledby="sushi-tab">
+                <div class="container p-5" id="sushi-content">
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row border">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls <span class="badge bg-dark-brown">New</span></p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row border">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p class="text-decoration-line-through">$8.000</p>
+                                    <p>$5.600<span class="badge bg-danger">30%</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row border m-1 p-1">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_824x622-170329122750-crunchyroll.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cocteles" role="tabpanel" aria-labelledby="cocteles-tab">
+                <div class="container p-5">
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://www.elespectador.com/resizer/SqGU44AHzvyDz60XaFBxnYq5UZY=/arc-anglerfish-arc2-prod-elespectador/public/TNYKOAO6ERBLRKFVCYWDRT5SBM.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="wine" role="tabpanel" aria-labelledby="wine-tab">
+                <div class="container p-5">
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://jumbo.vtexassets.com/arquivos/ids/441814/Vino-cabernet-sauvignon-135%C2%B0-750-cc.jpg?v=637602431906930000"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>California Rolls</p>
+                                    <p>Rolls enveltos en panco...</p>
+                                    <p>$8.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="entradas" role="tabpanel" aria-labelledby="entradas-tab"></div>
+
+            <div class="d-flex justify-content-center">
+
+                <button type="button" class="btn btn-outline-primary">Solicita tu plato favorito</button>
+            </div>
+        </div>
+    </div>
+    <!-- SECCION CONTACTO -->
+    <div class="container mt-3 p-4 bg-dark-brown" id="contacto">
+        <div class="card-group">
+            <div class="card m-1 m-sm-1 m-md-1">
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">Horario de apertura</h5>
+                    <p class="card-text text-center">Lunes - Jueves</p>
+                    <p class="card-text text-center">14:00 - 23:00</p>
+                    <p class="card-text text-center">Viernes - Domingo</p>
+                    <p class="card-text text-center ">14:00 - 24:00</p>
+                </div>
+            </div>
+            <div class="card m-5 m-sm-1">
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">Dejanos tus comentarios</h5>
+                    <p class="card-text text-center">Escribenos tus dudas y te contestaremos a la brevedad
+                    </p>
+                    <div class="d-flex justify-content-center">
+
+                        <button type="button" onclick="resenias()" class="btn btn-outline-primary">Escribir
+                            una reseña</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-5 m-sm-1">
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">Suscribirme</h5>
+                    <p class="card-text">Suscribete para sber todas las novedades y promociones</p>
+                    <button type="button" onclick="newlater()" class="btn btn-outline-primary">Escribir una reseña</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECCION RESERVAR MESAS -->
+    <div class="container mt-3 p-4 bg-grey" id="reservas">
+        <div class="row">
+            <div class="col bg-light-brown">
+                <img src="./Recursos/Imagenes/logo.png" alt="" width="350" height="54"
+                    class="d-inline-block align-text-top">
+                <h3>Direccion</h3>
+                <p>Av. Providencia</p>
+                <p>123456</p>
+                <br>
+                <h3>Horario de apertura</h3>
+                <p class="card-text text-center">Lunes - Jueves</p>
+                <p class="card-text text-center">14:00 - 23:00</p>
+                <p class="card-text text-center">Viernes - Domingo</p>
+                <p class="card-text text-center ">14:00 - 24:00</p>
+            </div>
+            <div class="col bg-light-brown m-2">
+                <form action="" onsubmit="return false">
+                    <h5>Realizar una reserva</h5>
+                    <p>Rellenar todos los campos obligatorios (*)</p>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <input type="date" id="fecha" class="form-control" placeholder="Fecha" aria-label="Fecha"
+                            aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <input type="time" id="hora" class="form-control" placeholder="Hora" aria-label="Hora"
+                            aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <input type="number" id="cantPersonas" class="form-control" placeholder="Cantidad de personas" aria-label="Cantidad de personas"
+                            aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <input type="text" id="nombreContacto" class="form-control" placeholder="Nombre de contacto" aria-label="Nombre de contacto"
+                            aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <input type="text" id="numeroContacto" class="form-control" placeholder="Numero de contacto" aria-label="Numero de contacto"
+                            aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="d-flex justify-content-center">
+    
+                        <button type="submit" onclick="validaCampos()" class="btn btn-outline-primary">Enviar</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <img class="btn-whatsapp" src="https://clientes.dongee.com/whatsapp.png" width="64" height="64" alt="Whatsapp" onclick="window.location.href='https://wa.me/573001112233?text=HOLAMUNDO%20COMO'">
+    <!-- FOOTER -->
+    <div class="" id="footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="text-muted">© 2021 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./JS/funciones.js"></script>
+</body>
+
+</html>

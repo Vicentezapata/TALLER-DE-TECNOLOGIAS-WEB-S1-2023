@@ -1,0 +1,47 @@
+/*COLORES DE BASICOS*/
+.bg-light-brown {
+    background-color: #f6f3e9!important;
+}
+.bg-grey {
+    background-color: #acc3c2!important;
+}
+.bg-brown {
+    background-color: #adb49e!important;
+}
+.bg-secondary-brown {
+    background-color: #aea67a!important;
+}
+.bg-dark-brown {
+    background-color: #b09857!important;
+}
+/*COLORES DE COMPONENTES*/
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #b09857;
+    border-color: #b09857;
+}
+.btn-outline-primary {
+    color: #b09857;
+    border-color: #b09857;
+}
+/* BOTON WHATASAPP*/
+img.btn-whatsapp {
+    display: block !important;
+    position: fixed;
+    z-index: 9999999;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius:100px !important;
+    }
+    img.btn-whatsapp:hover{
+    border-radius:100px !important;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(7,94,84,1); 
+    -moz-box-shadow: 0px 0px 15px 0px rgba(7,94,84,1);
+    box-shadow: 0px 0px 15px 0px rgba(7,94,84,1);
+    transition-duration: 1s;
+    } 
+    p{
+        text-align: justify;
+        text-justify: inter-word;
+    }
